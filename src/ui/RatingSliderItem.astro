@@ -1,0 +1,24 @@
+---
+import { SwiperSlide } from "astro-swiper";
+import Triangle from "../assets/triangle.svg";
+
+interface Props {
+  title: string;
+  subtitle: string;
+  author: string;
+}
+
+const { title, subtitle, author } = Astro.props;
+---
+
+<SwiperSlide>
+  <div class="bg-white py-10 px-8 rounded-[10px] shadow-md mb-5 relative">
+    <h3 class="text-center text-xs mb-2">{title}</h3>
+    <p class="text-center">{subtitle}</p>
+    <Triangle class="absolute bottom-[-102%] left-0 right-0 m-auto block top-0 drop-shadow-xl" />
+  </div>
+  <div class="flex flex-col items-center">
+    <span class="ms text-lg text-primary-600">account_circle</span>
+    <span class="text-body-lg font-bold">{author}</span>
+  </div>
+</SwiperSlide>

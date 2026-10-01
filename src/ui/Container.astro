@@ -1,0 +1,27 @@
+---
+import { tv } from "../utils/tv";
+
+interface Props {
+  class?: string;
+  spacing?: boolean;
+}
+
+const container = tv({
+  base: "px-container max-w-360 w-full mx-auto xl:px-container-md md:px-container-sm",
+  variants: {
+    spacing: {
+      true: "py-section md:py-section-md",
+      false: "py-0",
+    },
+  },
+  defaultVariants: {
+    spacing: true,
+  },
+});
+
+const { class: className, spacing = false } = Astro.props;
+---
+
+<div class={container({ spacing, class: className })}>
+  <slot />
+</div>

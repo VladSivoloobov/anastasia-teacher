@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import photo1 from "../assets/photo-1.png";
+import photo2 from "../assets/photo-2.png";
+import photo3 from "../assets/photo-3.png";
+import photo4 from "../assets/photo-4.png";
+---
+
+<ul class="flex flex-1 flex-wrap gap-5 aspect-540/710 px-5 xs:px-0 xs:gap-2">
+  <li class="flex-1 basis-[calc(55%-5rem)] xs:basis-[calc(55%-2rem)]">
+    <Image
+      class="w-full object-cover h-full"
+      src={photo1}
+      alt="Репетитор в библиотеке"
+    />
+  </li>
+  <li class="flex-1 basis-[45%] xs:basis-[calc(45%-2rem)] flex items-end">
+    <Image
+      class="w-full object-cover object-bottom aspect-square"
+      src={photo2}
+      alt="Стопка книг"
+    />
+  </li>
+  <li class="flex-1 basis-[calc(30%-5rem)] xs:basis-[calc(30%-2rem)]">
+    <Image
+      class="w-full aspect-164/285 object-cover max-h-[80%]"
+      src={photo3}
+      alt="Доска"
+    />
+  </li>
+  <li class="flex-1 basis-[calc(60%-5rem)] xs:basis-[calc(60%-2rem)]">
+    <Image
+      class="w-full object-cover object-bottom aspect-square"
+      src={photo4}
+      alt="Кружка кофе с надписью начинай"
+    />
+  </li>
+</ul>

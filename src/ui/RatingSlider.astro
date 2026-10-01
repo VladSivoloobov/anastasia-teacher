@@ -1,0 +1,59 @@
+---
+import { Swiper, SwiperWrapper, SwiperPagination } from "astro-swiper";
+---
+
+<Swiper
+  options={{
+    slidesPerView: 3,
+    spaceBetween: 32,
+    slidesPerGroup: 3,
+    pagination: {
+      clickable: true,
+      el: ".swiper-pagination",
+    },
+    autoHeight: true,
+    autoplay: {
+      delay: 5_000,
+    },
+    breakpoints: {
+      1: {
+        slidesPerView: 1,
+      },
+      767: {
+        slidesPerView: 2,
+      },
+      1080: {
+        slidesPerView: 3,
+      },
+    },
+    grabCursor: true,
+  }}
+>
+  <SwiperWrapper class="mb-10.5">
+    <slot />
+  </SwiperWrapper>
+  <SwiperPagination />
+</Swiper>
+
+<style>
+  .swiper .swiper-pagination {
+    position: static;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .swiper .swiper-pagination :global(.swiper-pagination-bullet) {
+    background-color: var(--color-secondary-600);
+    width: 8px;
+    height: 8px;
+  }
+
+  .swiper .swiper-pagination :global(.swiper-pagination-bullet-active) {
+    background-color: white;
+    border: 3px solid var(--color-secondary-600);
+    width: 12px;
+    height: 12px;
+  }
+</style>

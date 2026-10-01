@@ -1,0 +1,24 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  icon: string;
+}
+
+const { title, subtitle, icon } = Astro.props;
+---
+
+<li class="flex gap-10 md:block">
+  <div
+    class:list={[
+      "w-18 h-18 flex items-center flex-none justify-center bg-neutral-50",
+      "text-md rounded-full md:mb-3 md:mx-auto",
+    ]}
+  >
+    <span class="ms text-primary-600">{icon}</span>
+  </div>
+  <div>
+    <h3 class="mb-2 md:text-center" set:html={title} />
+    <p class="text-neutral-700 text-body-md md:text-center">{subtitle}</p>
+  </div>
+</li>

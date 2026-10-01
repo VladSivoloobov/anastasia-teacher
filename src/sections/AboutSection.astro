@@ -1,0 +1,47 @@
+---
+import Button from "../ui/Button.astro";
+import Container from "../ui/Container.astro";
+import PhotosGrid from "../ui/PhotosGrid.astro";
+import Section from "../ui/Section.astro";
+import VerticalIconList from "../ui/VerticalIconList.astro";
+import VerticalIconListItem from "../ui/VerticalIconListItem.astro";
+---
+
+<Section id="about">
+  <Container class="flex lg:flex-col md:gap-4">
+    <div class="flex-1">
+      <PhotosGrid />
+    </div>
+    <div class="flex-[0.8] px-10.5 lg:px-0">
+      <h2 class="mb-4">Обо мне</h2>
+      <p class="mb-10">
+        Помогаю школьникам перестать бояться уроков, контрольных и экзаменов.
+        Объясняю сложные правила простым языком, нахожу подход к каждому ребенку
+        и выстраиваю комфортный темп обучения без давления.
+      </p>
+      <VerticalIconList class="mb-10">
+        <VerticalIconListItem
+          icon="school"
+          title="Профильное образование"
+          subtitle="Диплом по специальности «Преподавание в начальных классах» + второе высшее по профилю «Русский язык и литература»."
+        />
+        <VerticalIconListItem
+          icon="leaderboard"
+          title="Реальные результаты"
+          subtitle="Средний балл учеников на ЕГЭ — 80, на ОГЭ — твердая 4 (русский язык — 28 баллов, литература — 27 баллов)."
+        />
+        <VerticalIconListItem
+          icon="checkmark"
+          title="Работа с любым уровнем"
+          subtitle="Беру учеников с нуля, помогаю отличникам точечно устранить пробелы к олимпиадам, а также ребятам, оставшимся на повторное обучение."
+        />
+        <VerticalIconListItem
+          icon="scoreboard"
+          title="Все направления"
+          subtitle="Русский язык (1–11 класс), начальная школа (любые запросы), литература (ОГЭ и развитие навыков чтения)."
+        />
+      </VerticalIconList>
+      <Button href="#"> Записаться на диагностику </Button>
+    </div>
+  </Container>
+</Section>

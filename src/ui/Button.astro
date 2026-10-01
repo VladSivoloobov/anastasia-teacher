@@ -1,0 +1,28 @@
+---
+import { tv } from "tailwind-variants";
+
+interface Props {
+  variant?: "primary" | "secondary";
+  href: string;
+  class?: string;
+}
+
+const { variant = "primary", href, class: className } = Astro.props;
+
+const button = tv({
+  base: "rounded-lg px-5 py-3 no-underline block w-max",
+  variants: {
+    color: {
+      primary: "bg-primary-600 text-white",
+      secondary: "bg-white text-primary-600",
+    },
+  },
+  defaultVariants: {
+    color: "primary",
+  },
+});
+---
+
+<a href={href} class:list={[button({ color: variant }), className]}>
+  <slot />
+</a>

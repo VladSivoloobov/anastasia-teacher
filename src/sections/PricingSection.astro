@@ -1,0 +1,35 @@
+---
+import Container from "../ui/Container.astro";
+import PricingItem from "../ui/PricingItem.astro";
+import PricingList from "../ui/PricingList.astro";
+import Section from "../ui/Section.astro";
+---
+
+<Section id="pricing" spacing={false} class="bg-primary-50">
+  <Container spacing class="flex gap-8 lg:flex-col">
+    <h2 class="flex-none max-w-[384px] lg:text-center lg:w-full lg:max-w-full">
+      Стоимость занятий
+    </h2>
+    <PricingList>
+      <PricingItem
+        type="default"
+        price={850}
+        title="Базовый тариф"
+        benefits={[
+          "Индивидуальный урок (~50 минут)",
+          "Любой класс и направление (русский язык, литература, начальная школа, подготовка к ВПР/ОГЭ/ЕГЭ)",
+          "Платформа «Яндекс Телемост»",
+          "Персональные материалы и обратная связь",
+        ]}
+      />
+      <PricingItem
+        type="limited"
+        title="Спецпредложения"
+        benefits={[
+          "Старт в сентябре: скидка на первые 2 урока для новых клиентов — всего 650 ₽ за занятие.",
+          "Выгода для начальной школы: при занятиях от 3 раз в неделю — 750 ₽ за занятие.",
+        ]}
+      />
+    </PricingList>
+  </Container>
+</Section>

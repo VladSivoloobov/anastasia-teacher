@@ -1,0 +1,49 @@
+---
+import Container from "../ui/Container.astro";
+import Button from "../ui/Button.astro";
+import Section from "../ui/Section.astro";
+import Circle from "../assets/hero-circles.svg";
+import heroImage from "../assets/hero-image.png";
+import { Image } from "astro:assets";
+---
+
+<Section id="hero" spacing={false}>
+  <Container
+    spacing
+    class:list={[
+      "flex relative pt-76.75 pb-37.5",
+      "lg:block lg:pt-40 lg:pb-0 md:pt-40 md:pb-0",
+    ]}
+  >
+    <div class="flex-[0.9]">
+      <h1 class="mb-4 md:text-center">
+        Анастасия <br class="md:hidden" /> Евгеньевна
+      </h1>
+      <p class="mb-8 md:text-center">
+        Индивидуальные онлайн-занятия. Готовлю к ОГЭ, ЕГЭ и ВПР, закрываю
+        пробелы в школьной программе и помогаю полюбить предмет с любого уровня
+        подготовки.
+      </p>
+      <Button class="lg:mb-20 md:mx-auto" href="#">
+        {" "}
+        Записаться на диагностику{" "}
+      </Button>
+    </div>
+    <div class="flex-1 -z-10 lg:relative">
+      <Image
+        class:list={[
+          "absolute right-10 top-40 bottom-0 m-auto z-10 xl:-right-20",
+          "lg:right-0 lg:top-0 lg:bottom-0 lg:left-0 lg:w-full",
+        ]}
+        src={heroImage}
+        alt="Репетитор с ноутбуком"
+      />
+      <Circle
+        class:list={[
+          "absolute -right-30 -top-40 xl:-right-50",
+          "lg:static lg:w-full lg:h-auto",
+        ]}
+      />
+    </div>
+  </Container>
+</Section>

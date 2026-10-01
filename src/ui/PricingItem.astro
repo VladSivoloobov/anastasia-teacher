@@ -1,0 +1,87 @@
+---
+import { tv } from "../utils/tv";
+import Button from "./Button.astro";
+
+interface BaseProps {
+  title: string;
+  benefits: string[];
+}
+
+interface DefaultProps extends BaseProps {
+  type: "default";
+  price: number;
+}
+
+interface LimitedProps extends BaseProps {
+  type: "limited";
+  price?: never;
+}
+
+type Props = DefaultProps | LimitedProps;
+
+const { title, benefits, price, type } = Astro.props;
+
+const card = tv({
+  base: "flex-1 p-6 max-w-83 rounded-lg h-max flex flex-col lg:max-w-none",
+  variants: {
+    background: {
+      default: "bg-white",
+      limited: "bg-primary-600",
+    },
+  },
+});
+
+const titleVariants = tv({
+  base: "text-body-lg mb-8",
+  variants: {
+    font: {
+      default: "text-black",
+      limited: "text-white font-bold",
+    },
+  },
+});
+
+const textVariants = tv({
+  base: "flex text-body-md",
+  variants: {
+    font: {
+      default: "text-neutral-900",
+      limited: "text-white",
+    },
+  },
+});
+
+const buttonVariants = tv({
+  variants: {
+    button: {
+      default: "mb-8",
+      limited: "order-last mt-8",
+    },
+  },
+});
+---
+
+<li class={card({ background: type })}>
+  <h3 class={titleVariants({ font: type })}>{title}</h3>
+  {price && (
+    <p class="mb-8 text-md font-bold">
+      {price}₽
+      <span class="text-neutral-500 text-body-sm font-medium"> / занятие</span>
+    </p>
+  )}
+  <Button
+    variant={type === "default" ? "primary" : "secondary"}
+    class={buttonVariants({ button: type })}
+    href="#"
+  >
+    Записаться на урок
+  </Button>
+  <ul class="flex flex-col gap-4">
+    {benefits.map((benefit) => (
+      <li class={textVariants({ font: type })}>
+        <span class="ms block flex-none w-6 h-6 text-body-lg">checkmark</span>
+        {benefit}
+      </li>
+    ))}
+  </ul>
+</li>

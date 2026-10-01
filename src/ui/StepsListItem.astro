@@ -1,0 +1,27 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  icon: string;
+  class?: string;
+}
+
+const { title, subtitle, icon, class: className } = Astro.props;
+---
+
+<li
+  class:list={[
+    "flex flex-col items-center px-10 flex-1 relative",
+    'after:content-[""] after:block after:h-4',
+    "after:bg-[radial-gradient(circle,color-mix(in_srgb,var(--color-primary-600)_20%,transparent)_24%,transparent_25%)]",
+    "after:absolute after:bg-repeat-x after:bg-size-[12px_12px] after:bg-center",
+    "after:left-1/2 after:w-full after:top-8 last:after:hidden",
+    className,
+  ]}
+>
+  <div class="bg-neutral-50 rounded-full h-20 w-20 flex items-center justify-center text-md text-primary-600 mb-4 z-10">
+    <span class="ms block">{icon}</span>
+  </div>
+  <h3 class="text-body-lg text-center mb-1">{title}</h3>
+  <p class="text-body-md text-center text-neutral-700">{subtitle}</p>
+</li>

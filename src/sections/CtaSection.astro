@@ -1,0 +1,21 @@
+---
+import Button from "../ui/Button.astro";
+import Container from "../ui/Container.astro";
+import Section from "../ui/Section.astro";
+import Circles from "../assets/cta-circles.svg";
+---
+
+<Section
+  spacing={false}
+  class="bg-neutral-800 relative overflow-hidden min-h-121.5"
+>
+  <Circles class="absolute left-0 right-0 top-0 bottom-0 m-auto" />
+  <Container class="py-33.75 flex items-center flex-col justify-center relative z-10">
+    <h2 class="text-white font-bold max-w-200 text-center mb-10">
+      Начните учиться без стресса уже на этой неделе
+    </h2>
+    <Button variant="secondary" href="#">
+      Записаться на урок
+    </Button>
+  </Container>
+</Section>

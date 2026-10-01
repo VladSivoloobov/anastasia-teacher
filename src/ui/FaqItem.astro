@@ -1,0 +1,61 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<li data-faq class="border-b border-b-neutral-400 py-6">
+  <button class="cursor-pointer flex items-center w-full justify-between gap-5">
+    <h3 class="text-body-lg font-normal text-start text-neutral-900">
+      {title}
+    </h3>
+    <span class="ms add-icon text-xs transition-transform duration-500">
+      add
+    </span>
+  </button>
+  <div data-faq-content>
+    <p class="text-body-md text-neutral-600">{subtitle}</p>
+  </div>
+</li>
+
+<style>
+  [data-faq] [data-faq-content] {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition:
+      grid-template-rows 0.5s,
+      padding-top 0.5s,
+      border-bottom 0.5s;
+  }
+
+  [data-faq-content] > * {
+    overflow: hidden;
+  }
+
+  [data-faq].shown {
+    border-color: var(--color-primary-600);
+  }
+
+  [data-faq].shown [data-faq-content] {
+    grid-template-rows: 1fr;
+    padding-top: 24px;
+  }
+
+  [data-faq].shown .add-icon {
+    transform: rotate(45deg);
+  }
+</style>
+
+<script>
+  const faqs = document.querySelectorAll("[data-faq]");
+
+  for (const faq of faqs) {
+    const button = faq.querySelector("button");
+    button?.addEventListener("click", () => {
+      faq.classList.toggle("shown");
+    });
+  }
+</script>

@@ -1,0 +1,28 @@
+---
+import { tv } from "../utils/tv";
+
+interface Props {
+  class?: string;
+  spacing?: boolean;
+  id?: string;
+}
+
+const { class: className, spacing = true, id } = Astro.props;
+
+const section = tv({
+  base: "mx-auto overflow-x-clip",
+  variants: {
+    spacing: {
+      true: "my-section md:my-section-md",
+      false: "my-0",
+    },
+  },
+  defaultVariants: {
+    spacing: true,
+  },
+});
+---
+
+<section id={id} class={section({ spacing, class: className })}>
+  <slot />
+</section>

@@ -1,0 +1,36 @@
+---
+import Container from "../ui/Container.astro";
+import Section from "../ui/Section.astro";
+import GridList from "../ui/GridList.astro";
+import GridListItem from "../ui/GridListItem.astro";
+---
+
+<Section id="feature">
+  <Container>
+    <h2 class="mb-12 lg:text-center">
+      Почему со мной учиться <br /> комфортно и эффективно
+    </h2>
+    <GridList>
+      <GridListItem
+        icon="balance"
+        title="Индивидуальный темп, <br />а не шаблон"
+        subtitle="Урок длится ~50 минут, но я всегда ориентируюсь на самочувствие ребенка и скорость усвоения темы — без спешки и перегрузок."
+      />
+      <GridListItem
+        icon="star"
+        title="Понятные алгоритмы <br />вместо зубрежки"
+        subtitle="Объясняю структуру экзаменов (ОГЭ, ЕГЭ, ВПР) простыми схемами, чтобы задания решались на автоматизме и без паники."
+      />
+      <GridListItem
+        icon="analytics"
+        title="Работа на любой <br />результат"
+        subtitle="Беру учеников с нуля и после второго года, подтягиваю текущие оценки или точечно закрываю сложные темы у отличников."
+      />
+      <GridListItem
+        icon="directions_run"
+        title="Старт с первого <br />урока"
+        subtitle="Диагностика не тратит время впустую — уже на первой встрече выявляем пробелы и сразу разбираем базу."
+      />
+    </GridList>
+  </Container>
+</Section>

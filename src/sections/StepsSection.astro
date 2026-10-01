@@ -1,0 +1,36 @@
+---
+import Container from "../ui/Container.astro";
+import Section from "../ui/Section.astro";
+import StepsList from "../ui/StepsList.astro";
+import StepsListItem from "../ui/StepsListItem.astro";
+---
+
+<Section id="steps">
+  <Container>
+    <h2 class="mb-10 text-center">4 шага к уверенным знаниям</h2>
+    <StepsList>
+      <StepsListItem
+        class="pl-6"
+        icon="history_edu"
+        title="Первое занятие-диагностика"
+        subtitle="Знакомимся, определяем текущий уровень, разбираем структуру экзамена и закрываем первые базовые пробелы."
+      />
+      <StepsListItem
+        icon="assignment"
+        title="Индивидуальный план"
+        subtitle="Составляю гибкую программу под вашу цель — будь то сдача экзамена, помощь с домашними заданиями или исправление оценок."
+      />
+      <StepsListItem
+        icon="computer"
+        title="Уроки в «Яндекс Телемост»"
+        subtitle="Занимаемся один на один ~50 минут в комфортном онлайн-формате без потери времени на дорогу."
+      />
+      <StepsListItem
+        icon="support"
+        title="Поддержка и контроль прогресса"
+        subtitle="Отслеживаю динамику, адаптирую нагрузку под самочувствие ребенка и даю регулярную обратную связь родителям."
+        class="pr-6"
+      />
+    </StepsList>
+  </Container>
+</Section>
