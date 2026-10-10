@@ -50,5 +50,3 @@ All commands are run from the root of the project in your terminal:
 - **GitHub**: [VladSivoloobov](https://github.com/VladSivoloobov)
 
 ---
-
-> 💡 **Tip**: Before final deployment, remember to verify all texts, contact details, and links within the section files (`src/sections/`) and widgets (`src/widgets/`). Also, update the `sitemap` configuration in `astro.config.mjs` with the actual production domain.
