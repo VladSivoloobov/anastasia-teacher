@@ -2,7 +2,7 @@
 
 ![Astro Badge](https://img.shields.io/badge/Astro-0C1222?style=for-the-badge&logo=astro&logoColor=FDFDFE) ![Tailwind Badge](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-![Website Preview](./docs/site_preview.png)
+![Website Preview](./docs/website_preview.png)
 
 A simple, fast and responsive landing page developed for a teacher, Anastasia.
 
