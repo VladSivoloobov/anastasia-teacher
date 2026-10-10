@@ -1,46 +1,54 @@
-# Astro Starter Kit: Basics
+# 🌟 Anastasia Landing Page
 
-```sh
-npm create astro@latest -- --template basics
-```
+![Astro Badge](https://img.shields.io/badge/Astro-0C1222?style=for-the-badge&logo=astro&logoColor=FDFDFE) ![Tailwind Badge](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Website Preview](./docs/site_preview.png)
 
-## 🚀 Project Structure
+A simple, fast and responsive landing page developed for a teacher, Anastasia.
 
-Inside of your Astro project, you'll see the following folders and files:
+🔗 **Live Site**: [vladsivoloobov.github.io/anastasia-teacher/](https://vladsivoloobov.github.io/anastasia-teacher/)
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## 🛠 Tech Stack
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+- **Framework**: [Astro](https://astro.build/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) v4 + [tailwind-variants](https://www.tailwind-variants.org/)
+- **UI Components**: [astro-swiper](https://github.com/nolimits4web/swiper) (for sliders and carousels)
+- **Build Tool**: Vite (built into Astro)
+- **Requirements**: Node.js `>= 22.12.0`
 
-## 🧞 Commands
+## ⚙️ Installation & Setup
 
-All commands are run from the root of the project, from a terminal:
+To get started with the project, ensure you have **Node.js version 22.12.0 or higher** installed.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+1. Install dependencies:
 
-## 👀 Want to learn more?
+   ```bash
+   npm install
+   ```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+2. Start the local development server:
+   ```bash
+   npm run dev
+   ```
+   The site will be available at: `http://localhost:4321`
+
+## 📜 Available Commands
+
+All commands are run from the root of the project in your terminal:
+
+| Command                   | Description                                                             |
+| :------------------------ | :---------------------------------------------------------------------- |
+| `npm run dev`             | Starts the local development server with Hot Module Replacement (HMR)   |
+| `npm run build`           | Builds the optimized production-ready site into the `./dist/` directory |
+| `npm run preview`         | Locally previews the built site before deploying                        |
+| `npm run astro`           | Accesses the Astro CLI (e.g., `npm run astro add react`)                |
+| `npm run astro -- --help` | Gets help information for Astro CLI commands                            |
+
+## 👨‍💻 Author
+
+- **Developer**: Vlad Sivoloobov
+- **GitHub**: [VladSivoloobov](https://github.com/VladSivoloobov)
+
+---
+
+> 💡 **Tip**: Before final deployment, remember to verify all texts, contact details, and links within the section files (`src/sections/`) and widgets (`src/widgets/`). Also, update the `sitemap` configuration in `astro.config.mjs` with the actual production domain.
